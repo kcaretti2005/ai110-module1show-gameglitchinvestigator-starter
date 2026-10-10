@@ -14,7 +14,8 @@ Document at least 3 bugs you found. Add rows as needed.
 | 50    |"Go Higher"        | "Go Lower"      |none                    |
 |80     |"Go Lower"         | "Go Higher"     |none |
 |clicked new game |start new game | had to click repeatedly| none      |
-|Start Game | Attempts: 0   | Attempts: 1     |none
+|Start Game | Attempts: 0   | Attempts: 1     |none                    |
+| 120 (secret 4), guessed twice | Same hint both times | "Go HIGHER" once, "Go LOWER" once | none |
 ---
 
 ## 2. How did you use AI as a teammate?
