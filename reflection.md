@@ -3,10 +3,7 @@
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
 ## 1. What was broken when you started?
-
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+When I first started and played for the first time, the answers were backwards. I guessed 50, 25, 10, and 1 to and was told to guess lower on every single one of those attempts for the hint even though the secret told me the number was 65. Then I guessed 80 and the hint said I needed to guess higher. I also tried to start a new game and that did not work until I spam clicked the button multiple times.
 
 **Bug Reproduction Log**
 
@@ -14,9 +11,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| 50    |"Go Higher"        | "Go Lower"      |none                    |
+|80     |"Go Lower"         | "Go Higher"     |none |
+|clicked new game |start new game | had to click repeatedly| none      |
 
 ---
 
