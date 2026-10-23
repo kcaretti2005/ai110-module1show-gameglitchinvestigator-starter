@@ -31,21 +31,26 @@ Claude suggested that I go to logic_utils.py to find the hint bug, but that file
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I decided whether a bug was really fixed or not by doing 2 things. The first being logically reasoning. I would make the fix and analyze the code and ask myself did this truly fix the bug or did it just cover up half of it. Because sometimes you are able to fix a problem but it does not debug the entire error itself it is like taping a leak, it'll eventually give. The second thing I do is test it a bunch. I got through and test the bug I just fixed to make sure it is completely patched. 
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  I ran a pytest that where all 3 tests that I originally had failed with NotImplementedError because the logic was still in app.py. This basically told me my code was unorganized I had forgetten an entire step. Once I fixed this though it passed.
 - Did AI help you design or understand any tests? How?
-
+AI did help me here. Claude helped me understand why these errors were happening. I mainly used Claude as a debug assistant and would it explain to me why certain things are happening.
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
+Streamlit reruns your entire script from top to bottom every time something changes, like typing a guess or clicking a button. Because everything starts over on each rerun, a normal variable like the secret number would be thrown away and replaced every time, so the game could never remember it. Session state (st.session_state) is where the app stores values that need to survive reruns, like the secret, the number of attempts, the score, and the guess history. I saw this in the Developer Debug Info panel, which showed the old score and was missing my latest guess, because that panel runs above the code that handles my guess, so it shows the state from before the newest guess was processed.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  I would say on habit or stategy from this project that I want to reuse is just the entire debugging process. I found myself more focused in on it due to the entire project essentially being that. I would go through a logical thought process and rule out answers. Then I would make a change and test and record my findings until I have fully debugged.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I would probably use Claude in the side panel rather than just using it as a desktop browser. This would allow for much more efficiecy and time saved.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project has showed me that AI generated code is essentially useless if there is not an educated individual supervising. This code is indeed full and compelte. But it comes with many errors that logically make no sense as to why they would ever be there. Therefore you really need an educated individual to watch over AI generated code.

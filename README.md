@@ -25,30 +25,31 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [X] Describe the game's purpose.
+  A Streamlit number guessing game where you guess a secret number and get higher/lower hints.
+- [X] Detail which bugs you found.
+  The hints were swapped, the secret became a string on even attempts.
+- [X] Explain what fixes you applied.
+I swapped the hint messages back in check_guess so “Too High” tells the player to go lower and “Too Low” tells them to go higher, removed the code that turned the secret into a string on even attempts so every guess is compared as a number, moved the game logic into logic_utils.py, and added pytest tests that confirm the outcomes and hint messages.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Run `python -m streamlit run app.py` from the project folder to open the game in your browser.
+2. Open "Developer Debug Info" to see the secret number.
+3. Guess a number below the secret. The hint now says "Go HIGHER."
+4. Guess a number above the secret. The hint now says "Go LOWER," including on even-numbered attempts.
+5. Guess the secret to win and see the "You won!" message with your score.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+collected 4 items                                                                                                 
+
+tests\test_game_logic.py ....                                                                               [100%]
+
+=============================================== 4 passed in 0.03s ================================================
 ```
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
